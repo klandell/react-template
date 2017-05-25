@@ -11,6 +11,7 @@ const logger = require('morgan');
 const bodyParser = require('body-parser');
 const compression = require('compression');
 const path = require('path');
+const yes = require('yes-https');
 
 // instantiate the express app
 const app = express();
@@ -22,6 +23,9 @@ app.use(bodyParser.urlencoded({
     extended: false,
 }));
 app.use(compression());
+
+// Redirect to https
+app.use(yes());
 
 // serve static files
 app.use(express.static(path.join(__dirname, 'public')));

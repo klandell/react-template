@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "create": "npm install && cd client && npm install",
-    "build": "webpack --config ./client/webpack.config.js",
-    "build:prod": "NODE_ENV=production npm run build",
+    "build": "cd client && npm run build",
+    "build:prod": "cd client && npm run build:prod",
     "start": "node ./bin/www"
   },
   "author": "Kyle Landell <kyle.landell@gmail.com>",
@@ -17,7 +17,8 @@
     "compression": "^1.6.2",
     "dotenv": "^4.0.0",
     "express": "^4.15.3",
-    "morgan": "^1.8.1"
+    "morgan": "^1.8.1",
+    "yes-https": "0.0.4"
   },
   "devDependencies": {}
 }
