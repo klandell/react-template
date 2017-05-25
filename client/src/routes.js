@@ -9,7 +9,7 @@ export default (
     <Switch>
         <Redirect from="/home" to="/" />
         <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
+        <Route path="/about/:param1?/:param2?" component={About} />
         <Route path="*" component={NotFound} />
     </Switch>
 );

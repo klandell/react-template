@@ -13,10 +13,6 @@ import { showAbout, showNotFound } from 'Actions/layoutActions';
 }))
 class Layout extends React.Component {
     static propTypes = {
-        children: PropTypes.oneOfType([
-            PropTypes.arrayOf(PropTypes.node),
-            PropTypes.node,
-        ]).isRequired,
         actions: PropTypes.shape({
             showAbout: PropTypes.func.isRequired,
             showNotFound: PropTypes.func.isRequired,
