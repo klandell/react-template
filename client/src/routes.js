@@ -7,7 +7,7 @@ import NotFound from 'Containers/NotFound';
 
 export default (
     <Switch>
-        <Redirect from="/home" to="/" />
+        <Redirect exact from="/home" to="/" />
         <Route exact path="/" component={Home} />
         <Route path="/about/:param1?/:param2?" component={About} />
         <Route path="*" component={NotFound} />
