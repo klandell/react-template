@@ -9,6 +9,7 @@ if (!NODE_ENV) {
 const express = require('express');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
+const compression = require('compression');
 const path = require('path');
 
 // instantiate the express app
@@ -20,6 +21,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: false,
 }));
+app.use(compression());
 
 // serve static files
 app.use(express.static(path.join(__dirname, 'public')));
