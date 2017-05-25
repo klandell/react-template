@@ -8,9 +8,7 @@ module.exports = {
     context: `${__dirname}/src`,
     target: 'web',
     devtool: debug ? 'inline-sourcemap' : 'cheap-module-source-map',
-    entry: {
-        bundle: './entry.js',
-    },
+    entry: { bundle: './entry.js' },
     module: {
         rules: [
             {
@@ -28,21 +26,15 @@ module.exports = {
                 loaders: [
                     {
                         loader: 'style-loader',
-                        options: {
-                            minimize: true,
-                        },
+                        options: { minimize: true },
                     },
                     {
                         loader: 'css-loader',
-                        options: {
-                            minimize: true,
-                        },
+                        options: { minimize: true },
                     },
                     {
                         loader: 'sass-loader',
-                        options: {
-                            minimize: true,
-                        },
+                        options: { minimize: true },
                     },
                 ],
             },
@@ -73,25 +65,20 @@ module.exports = {
             name: 'vendor',
             minChunks: ({ resource }) => /node_modules/.test(resource),
         }),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'manifest',
-        }),
+        new webpack.optimize.CommonsChunkPlugin({ name: 'manifest' }),
     ]).concat(debug ? [] : [
         new webpack.optimize.OccurrenceOrderPlugin(),
         new webpack.optimize.AggressiveMergingPlugin(),
-        new webpack.optimize.UglifyJsPlugin({
-            comments: false,
-        }),
+        new webpack.optimize.UglifyJsPlugin({ comments: false }),
     ]).concat([
         new OfflinePlugin({
             autoUpdate: true,
+            publicPath: '/',
             ServiceWorker: {
                 events: true,
                 navigateFallbackURL: '/',
             },
-            AppCache: {
-                events: true,
-            },
+            AppCache: { events: true },
             externals: [
                 'index.html',
                 'manifest.json',
