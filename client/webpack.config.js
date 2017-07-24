@@ -19,20 +19,20 @@ module.exports = {
             {
                 test: /\.scss$/,
                 exclude: /node_modules/,
-                loaders: ['style', 'css', 'sass'],
-                    // {
-                    //    loader: 'style-loader',
-                    //    options: { minimize: true },
-                    // },
-                    // {
-                    //    loader: 'css-loader',
-                    //    options: { minimize: true },
-                    // },
-                    // {
-                    //    loader: 'sass-loader',
-                    //    options: { minimize: true },
-                    // },
-                // ],
+                loaders: [
+                    {
+                        loader: 'style-loader',
+                        options: { minimize: !debug },
+                    },
+                    {
+                        loader: 'css-loader',
+                        options: { minimize: !debug },
+                    },
+                    {
+                        loader: 'sass-loader',
+                        options: { minimize: !debug },
+                    },
+                ],
             },
         ],
     },
