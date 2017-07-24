@@ -7,6 +7,7 @@ parserOptions:
         jsx: true
 env:
   browser: true
+  jest: true
 plugins:
   - react
 settings:

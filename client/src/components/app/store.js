@@ -1,7 +1,7 @@
 import { applyMiddleware, createStore } from 'redux';
 import { routerMiddleware } from 'react-router-redux';
 import thunk from 'redux-thunk';
-import reducer from './reducers';
+import reducer from 'Reducers';
 import history from './history';
 
 let middleware = [thunk, routerMiddleware(history)];

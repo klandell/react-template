@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout component should be able to render children. 1`] = `
+<div
+  className="layout"
+>
+  <button
+    onClick={[Function]}
+  >
+    About
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    404 Not Found
+  </button>
+  <div>
+    Hello
+  </div>
+  <div>
+    World
+  </div>
+</div>
+`;
+
+exports[`Layout component should be able to render no children. 1`] = `
+<div
+  className="layout"
+>
+  <button
+    onClick={[Function]}
+  >
+    About
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    404 Not Found
+  </button>
+</div>
+`;

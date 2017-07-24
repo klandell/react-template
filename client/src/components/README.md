@@ -1,2 +1,2 @@
 # Components
-Dumb components. NOT REDUX AWARE.
+All components and containers, organized by feature

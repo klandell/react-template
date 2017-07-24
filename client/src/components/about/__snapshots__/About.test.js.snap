@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`About component should be able to render no path parameters. 1`] = `
+<div
+  className="about"
+>
+  <h1>
+    About
+  </h1>
+</div>
+`;
+
+exports[`About component should be able to render one path parameter. 1`] = `
+<div
+  className="about"
+>
+  <h1>
+    About
+  </h1>
+  <h1>
+    Hello
+  </h1>
+</div>
+`;
+
+exports[`About component should be able to render two path parameters. 1`] = `
+<div
+  className="about"
+>
+  <h1>
+    About
+  </h1>
+  <h1>
+    Hello
+  </h1>
+  <h1>
+    World
+  </h1>
+</div>
+`;

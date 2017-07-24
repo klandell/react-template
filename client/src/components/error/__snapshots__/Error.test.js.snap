@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Error component should render a 404 error. 1`] = `
+<div
+  className="error"
+>
+  <h1>
+    404
+  </h1>
+</div>
+`;

@@ -4,11 +4,14 @@
   "description": "A template project for a react app",
   "main": "src/entry.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "create": "yarn && cd client && yarn",
-    "build": "cd client && npm run build",
-    "build:prod": "cd client && npm run build:prod",
-    "start": "node ./bin/www"
+    "client:build": "cd client && yarn build",
+    "client:build:prod": "cd client && yarn build:prod",
+    "client:build:watch": "cd client && yarn build:watch",
+    "client:test": "cd client && yarn test",
+    "client:test:update": "cd client && yarn test:update",
+    "server:start": "node ./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Kyle Landell <kyle.landell@gmail.com>",
   "license": "MIT",

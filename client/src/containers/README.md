@@ -1,2 +1,0 @@
-# Containers
-Redux aware components

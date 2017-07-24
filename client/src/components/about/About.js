@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { string } from 'prop-types';
-import style_ from 'Sass/containers/About.scss';
+import style_ from './About.scss';
 
 export default class About extends Component {
     static propTypes = {
@@ -13,13 +13,17 @@ export default class About extends Component {
         param2: '',
     }
 
+    renderParam(value) {
+        return value ? <h1>{value}</h1> : null;
+    }
+
     render() {
         const { param1, param2 } = this.props;
         return (
-            <div className="about-wrapper">
+            <div className="about">
                 <h1>About</h1>
-                {param1}
-                {param2}
+                {this.renderParam(param1)}
+                {this.renderParam(param2)}
             </div>
         );
     }
