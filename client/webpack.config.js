@@ -15,28 +15,24 @@ module.exports = {
                 test: /\.js$/,
                 loader: 'babel-loader',
                 exclude: /node_modules/,
-                options: {
-                    presets: ['react', 'es2015', 'stage-0'],
-                    plugins: ['react-html-attrs', 'transform-decorators-legacy'],
-                },
             },
             {
                 test: /\.scss$/,
                 exclude: /node_modules/,
-                loaders: [
-                    {
-                        loader: 'style-loader',
-                        options: { minimize: true },
-                    },
-                    {
-                        loader: 'css-loader',
-                        options: { minimize: true },
-                    },
-                    {
-                        loader: 'sass-loader',
-                        options: { minimize: true },
-                    },
-                ],
+                loaders: ['style', 'css', 'sass'],
+                    // {
+                    //    loader: 'style-loader',
+                    //    options: { minimize: true },
+                    // },
+                    // {
+                    //    loader: 'css-loader',
+                    //    options: { minimize: true },
+                    // },
+                    // {
+                    //    loader: 'sass-loader',
+                    //    options: { minimize: true },
+                    // },
+                // ],
             },
         ],
     },
