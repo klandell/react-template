@@ -9,7 +9,5 @@ OfflinePluginRuntime.install({
     onUpdated: () => window.location.reload(),
 });
 
-const app = document.getElementById('app');
-ReactDOM.render(
-    <App />, app,
-);
+// render the app
+ReactDOM.render(<App />, document.getElementById('app'));

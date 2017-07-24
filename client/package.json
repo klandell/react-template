@@ -53,7 +53,15 @@
       "^Components/(.*)$": "<rootDir>/src/components/$1",
       "^Constants/$": "<rootDir>/src/constants.js",
       "^Reducers/(.*)$": "<rootDir>/src/reducers/$1"
-    }
+    },
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom": ["src/**/*.js"],
+    "coveragePathIgnorePatterns": [
+        "coverage",
+        "node_modules",
+        "webpack.config.js"
+    ],
+    "verbose": true
   },
   "author": "Kyle Landell <kyle.landell@gmail.com>",
   "license": "MIT"
