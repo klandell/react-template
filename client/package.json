@@ -53,7 +53,7 @@
       "^Actions/(.*)$": "<rootDir>/src/actions/$1",
       "^Components/(.*)$": "<rootDir>/src/components/$1",
       "^Constants$": "<rootDir>/src/constants.js",
-      "^Reducers/(.*)$": "<rootDir>/src/reducers/$1"
+      "^Reducers$": "<rootDir>/src/reducers/index.js"
     },
     "coverageDirectory": "coverage",
     "collectCoverageFrom": [
@@ -62,7 +62,10 @@
     "coveragePathIgnorePatterns": [
       "coverage",
       "node_modules",
-      "webpack.config.js"
+      "webpack.config.js",
+      "src/constants.js",
+      "src/entry.js",
+      "src/reducers/index.js"
     ],
     "verbose": true
   },
