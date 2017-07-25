@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LayoutWrapper properly renders the layout component with children. 1`] = `
+<Layout
+  onAboutClick={[Function]}
+  onNotFoundClick={[Function]}
+>
+  <div
+    className="layout"
+  >
+    <button
+      className="about-btn"
+      onClick={[Function]}
+    >
+      About
+    </button>
+    <button
+      className="not-found-btn"
+      onClick={[Function]}
+    >
+      404 Not Found
+    </button>
+     
+    <div>
+      Foo
+    </div>
+    <div>
+      Bar
+    </div>
+  </div>
+</Layout>
+`;
+
+exports[`LayoutWrapper properly renders the layout component with no children. 1`] = `
+<Layout
+  onAboutClick={[Function]}
+  onNotFoundClick={[Function]}
+>
+  <div
+    className="layout"
+  >
+    <button
+      className="about-btn"
+      onClick={[Function]}
+    >
+      About
+    </button>
+    <button
+      className="not-found-btn"
+      onClick={[Function]}
+    >
+      404 Not Found
+    </button>
+     
+  </div>
+</Layout>
+`;

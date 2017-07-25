@@ -5,11 +5,13 @@ exports[`Layout component should be able to render children. 1`] = `
   className="layout"
 >
   <button
+    className="about-btn"
     onClick={[Function]}
   >
     About
   </button>
   <button
+    className="not-found-btn"
     onClick={[Function]}
   >
     404 Not Found
@@ -28,11 +30,13 @@ exports[`Layout component should be able to render no children. 1`] = `
   className="layout"
 >
   <button
+    className="about-btn"
     onClick={[Function]}
   >
     About
   </button>
   <button
+    className="not-found-btn"
     onClick={[Function]}
   >
     404 Not Found

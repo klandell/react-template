@@ -7,7 +7,7 @@ import AboutContainer from 'Components/about/AboutContainer';
 import Error from 'Components/error/Error';
 import routes from './routes';
 
-test('Router should render the Home component when visiting /', () => {
+test('Router should render the Home component when visiting /.', () => {
     const component = mount(
         <MemoryRouter initialEntries={['/']}>
             {routes}
@@ -16,7 +16,7 @@ test('Router should render the Home component when visiting /', () => {
     expect(component.find(Home).length).toBe(1);
 });
 
-test('Router should render the Home component when visiting /', () => {
+test('Router should render the Home component when visiting /home.', () => {
     const component = mount(
         <MemoryRouter initialEntries={['/home']}>
             {routes}
@@ -25,7 +25,7 @@ test('Router should render the Home component when visiting /', () => {
     expect(component.find(Home).length).toBe(1);
 });
 
-test('Router should render the AboutContainer component when visiting /about', () => {
+test('Router should render the AboutContainer component when visiting /about.', () => {
     const component = mount(
         <MemoryRouter initialEntries={['/about']}>
             {routes}
@@ -34,7 +34,7 @@ test('Router should render the AboutContainer component when visiting /about', (
     expect(component.find(AboutContainer).length).toBe(1);
 });
 
-test('Router should render the AboutContainer component when visiting /about:param1?', () => {
+test('Router should render the AboutContainer component when visiting /about:param1?.', () => {
     const component = mount(
         <MemoryRouter initialEntries={['/about/foo']}>
             {routes}
@@ -43,7 +43,7 @@ test('Router should render the AboutContainer component when visiting /about:par
     expect(component.find(AboutContainer).length).toBe(1);
 });
 
-test('Router should render the AboutContainer component when visiting /about:param1?/:param2?', () => {
+test('Router should render the AboutContainer component when visiting /about:param1?/:param2?.', () => {
     const component = mount(
         <MemoryRouter initialEntries={['/about/foo/bar']}>
             {routes}
@@ -52,7 +52,7 @@ test('Router should render the AboutContainer component when visiting /about:par
     expect(component.find(AboutContainer).length).toBe(1);
 });
 
-test('Router should render the error component when visiting any other page', () => {
+test('Router should render the error component when visiting any other page.', () => {
     let component = mount(
         <MemoryRouter initialEntries={['/foo']}>
             {routes}

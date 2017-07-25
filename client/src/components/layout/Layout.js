@@ -11,8 +11,8 @@ export default class Layout extends Component {
 
         return (
             <div className="layout">
-                <button onClick={onAboutClick}>About</button>
-                <button onClick={onNotFoundClick}>404 Not Found</button>
+                <button className="about-btn" onClick={onAboutClick}>About</button>
+                <button className="not-found-btn" onClick={onNotFoundClick}>404 Not Found</button>
                 {children}
             </div>
         );
