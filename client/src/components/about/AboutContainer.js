@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { shape, string } from 'prop-types';
 import About from './About';
-import style_ from './About.scss';
 
 // Wrap About in a container so that our presentation component has no dependencies on the router.
 export default class AboutContainer extends Component {

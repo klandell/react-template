@@ -1,5 +1,12 @@
 @import '~Theme/colors';
+@import '~Theme/mixins';
 
 .about {
-    color: $cobalt;
+    ++e(title) {
+        color: $cobalt;
+    }
+
+    ++e(param) {
+        color: red;
+    }
 }

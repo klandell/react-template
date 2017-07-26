@@ -1,0 +1,58 @@
+@mixin bem-constructor($separator, $elements) {
+    $selector: ();
+    @each $element in $elements {
+        $selector: #{$selector"&#{$separator}#{$element},"}
+    }
+    #{$selector} {
+        @content;
+    }
+}
+
+/**
+ * BEM element constructor.
+ * example use:
+ * .block {
+ *   ++e(element) {
+ *     width: 100px;
+ *   }
+ * }
+ *
+ * output:
+ * .block__element {
+ *   width: 100px;
+ * }
+ */
+@mixin e($elements...) {
+    $separator: "__";
+    @include bem-constructor($separator, $elements) {
+        @content;
+    }
+}
+
+/**
+ * BEM modifier constructor.
+ * example use:
+ * .block {
+ *   ++e(element) {
+ *     width: 100px;
+ *
+ *     ++m(modifier1, modifier2) {
+ *       font-weight: bold;
+ *     }
+ *   }
+ * }
+ *
+ * output:
+ * .block__element {
+ *   width: 100px;
+ * }
+ * .block__element--modifier1, .block__element--modifier2 {
+ *   font-weight: bold;
+ * }
+ */
+@mixin m($modifiers...) {
+    $separator: "--";
+    @include bem-constructor($separator, $elements) {
+        @content;
+    }
+}

@@ -32,6 +32,14 @@ module.exports = {
                         loader: 'sass-loader',
                         options: { minimize: !debug },
                     },
+                    {
+                        loader: 'string-replace-loader',
+                        query: {
+                            search: '\\+\\+',
+                            replace: '@include ',
+                            flags: 'g',
+                        },
+                    },
                 ],
             },
         ],
